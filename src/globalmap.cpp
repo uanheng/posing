@@ -18,7 +18,3 @@ globalmap::globalmap(/* args */)
 globalmap::~globalmap()
 {
 }
-
-bool generate()
-{
-}

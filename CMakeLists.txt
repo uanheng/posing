@@ -5,7 +5,14 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  tf
+  sensor_msgs
+  pcl_conversions
+  pcl_ros
+  laser_geometry
 )
+
+find_package(PCL 1.8 REQUIRED)
 
 catkin_package()
 
@@ -21,5 +28,5 @@ add_executable( POSE
   src/globalmap.cpp
 )
 
-target_link_libraries( POSE  ${catkin_LIBRARIES})
+target_link_libraries( POSE ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
