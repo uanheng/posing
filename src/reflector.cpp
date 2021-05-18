@@ -24,7 +24,7 @@ Reflector::~Reflector()
 
 void Reflector::laserpoints_callback(const sensor_msgs::LaserScan::ConstPtr& laser_msg_ptr)
 {
-  std::cout << "i heared message!" << std::endl;
+  // std::cout << "i heared message!" << std::endl;
   new_laser_data_.push_back(*laser_msg_ptr);
 }
 
@@ -78,15 +78,15 @@ bool Reflector::split()
   for(uint16_t i = 0; i < multi_reflector_points.size(); i ++)
   {
     std::cout << "multi_reflector_points" << " [" << i << "]" << std::endl;
-    for(uint16_t ii = 0; ii < multi_reflector_points[i].size(); ii ++)
-    {
-      // std::cout << "multi_reflector_points" << " [" << i << "]";
-      // std::cout << "[" << ii << "]" << std::endl;
-      std::cout 
-      << multi_reflector_points[i][ii].i << "\t" 
-      << multi_reflector_points[i][ii].x << "\t" 
-      << multi_reflector_points[i][ii].y << std::endl;
-    }
+    // for(uint16_t ii = 0; ii < multi_reflector_points[i].size(); ii ++)
+    // {
+    //   // std::cout << "multi_reflector_points" << " [" << i << "]";
+    //   // std::cout << "[" << ii << "]" << std::endl;
+    //   std::cout 
+    //   << multi_reflector_points[i][ii].i << "\t" 
+    //   << multi_reflector_points[i][ii].x << "\t" 
+    //   << multi_reflector_points[i][ii].y << std::endl;
+    // }
   }
 
   single_reflector_points.clear();
